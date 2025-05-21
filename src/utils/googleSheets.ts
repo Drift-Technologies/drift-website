@@ -10,7 +10,7 @@ export async function addEmailToSheet(email: string) {
   try {
     const jwt = new JWT({
       email: GOOGLE_CLIENT_EMAIL,
-      key: GOOGLE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+      key: GOOGLE_PRIVATE_KEY,
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
 
